@@ -28,9 +28,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Log.d(TAG,"\n\nTEST\n\n");
-
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             // Create channel to show notifications.
             String channelId  = "123456";
