@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Aufgabe3</string>
-    <string name="default_notification_channel_id">0</string>
-    <string name="fcm_message">If you can read this, it works!</string>
-</resources>
