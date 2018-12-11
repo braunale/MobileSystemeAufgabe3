@@ -17,6 +17,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.RemoteMessage;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button logTokenButton = findViewById(R.id.logTokenButton);
+        Button sendMessageButton = findViewById(R.id.buttonSendMessage);
         logTokenButton.setOnClickListener(new View.OnClickListener() {
 
 
@@ -90,6 +94,23 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                     
+            }
+        });
+
+
+        sendMessageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Random random = new Random();
+                FirebaseMessaging fm = FirebaseMessaging.getInstance();
+                String projectId = "87344848365";
+                Log.d(TAG, "Try to send a Message at Server: "+projectId);
+                fm.send(new RemoteMessage.Builder( projectId + "@gcm.googleapis.com")
+                        .setMessageId(""+random.nextInt())
+                        .addData("Mein Identifier", "Hallo das ist ein Test")
+                        .addData("Nochmal ein Identifier","Und das ist nochmal ein Test")
+                        .addData("action", "ECHO")
+                        .build());
             }
         });
     }
