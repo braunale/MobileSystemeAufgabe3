@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Aufgabe3_neu</string>
     <string name = "default_notification_channel_id">0</string>
-    <string name = "fcm_message">"This is a Test notification from my smartphone"</string>
+    <string name = "fcm_message">"Message received from"</string>
 </resources>
