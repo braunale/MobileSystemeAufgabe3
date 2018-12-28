@@ -19,6 +19,10 @@ public class Util {
 	public static final String BACKEND_ACTION_REGISTER = "REGISTER";
 	public static final String BACKEND_ACTION_ECHO = "ECHO";
 	public static final String BACKEND_ACTION_MESSAGE = "MESSAGE";
+	
+	public static final String BACKEND_ACTION_GPS = "GPS"; 
+	public static final String BACKEND_ACTION_LIGHT = "LIGHT";
+	public static final String BACKEND_ACTION_ACCELERATOR = "ACCELERATOR"; 
 
 	// For the app common payload message attributes (android - xmpp server)
 	public static final String PAYLOAD_ATTRIBUTE_MESSAGE = "message";

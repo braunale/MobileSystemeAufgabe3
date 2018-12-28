@@ -26,11 +26,10 @@ import org.xmlpull.v1.XmlPullParser;
 
 import com.wedevol.xmpp.bean.CcsInMessage;
 import com.wedevol.xmpp.bean.CcsOutMessage;
-import com.wedevol.xmpp.server.FcmPacketExtension;
-import com.wedevol.xmpp.server.MessageHelper;
-import com.wedevol.xmpp.server.ProcessorFactory;
 import com.wedevol.xmpp.service.PayloadProcessor;
 import com.wedevol.xmpp.util.Util;
+
+import tracking.Person;
 
 /**
  * Sample Smack implementation of a client for FCM Cloud Connection Server. Most
@@ -48,6 +47,9 @@ public class CcsClient implements PacketListener {
 	private String mProjectId = null;
 	private boolean mDebuggable = false;
 	private String fcmServerUsername = null;
+	
+	public static Person person = new Person(); 
+	
 
 	public static CcsClient getInstance() {
 		if (sInstance == null) {

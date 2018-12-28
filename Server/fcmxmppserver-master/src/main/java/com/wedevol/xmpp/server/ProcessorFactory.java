@@ -1,7 +1,10 @@
 package com.wedevol.xmpp.server;
 
 import com.wedevol.xmpp.service.PayloadProcessor;
+import com.wedevol.xmpp.service.impl.AcceleratorProcessor;
 import com.wedevol.xmpp.service.impl.EchoProcessor;
+import com.wedevol.xmpp.service.impl.GPSProcessor;
+import com.wedevol.xmpp.service.impl.LightProcessor;
 import com.wedevol.xmpp.service.impl.MessageProcessor;
 import com.wedevol.xmpp.service.impl.RegisterProcessor;
 import com.wedevol.xmpp.util.Util;
@@ -23,6 +26,12 @@ public class ProcessorFactory {
 			return new EchoProcessor();
 		} else if (action.equals(Util.BACKEND_ACTION_MESSAGE)) {
 			return new MessageProcessor();
+		}else if(action.equals(Util.BACKEND_ACTION_GPS)) {
+			return new GPSProcessor();
+		}else if(action.equals(Util.BACKEND_ACTION_LIGHT)) {
+			return new LightProcessor(); 
+		}else if(action.equals(Util.BACKEND_ACTION_ACCELERATOR)) {
+			return new AcceleratorProcessor(); 
 		}
 		throw new IllegalStateException("ProcessorFactory: Unknown action: " + action + ". Options: 'REGISTER', 'ECHO', 'MESSAGE'");
 	}
