@@ -33,6 +33,7 @@ public class ProcessorFactory {
 		}else if(action.equals(Util.BACKEND_ACTION_ACCELERATOR)) {
 			return new AcceleratorProcessor(); 
 		}
+		
 		throw new IllegalStateException("ProcessorFactory: Unknown action: " + action + ". Options: 'REGISTER', 'ECHO', 'MESSAGE'");
 	}
 }

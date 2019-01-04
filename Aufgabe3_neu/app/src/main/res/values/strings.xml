@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Aufgabe3_neu</string>
-    <string name = "default_notification_channel_id">0</string>
-    <string name = "fcm_message">"Message received from"</string>
+    <string name="default_notification_channel_id">0</string>
+    <string name="fcm_message">"Message received from"</string>
     <string name="menu_gps">GPS Sensor</string>
     <string name="menu_brightness">Brightness Sensor</string>
     <string name="menu_accelerometer">Accelerometer</string>
+    <string name="please_sign_in">Please sign in with your Google account!</string>
 </resources>

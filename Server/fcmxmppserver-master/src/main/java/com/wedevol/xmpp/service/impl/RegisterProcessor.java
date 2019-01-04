@@ -15,10 +15,10 @@ public class RegisterProcessor implements PayloadProcessor {
 		// have more reg IDs associated. The messages IDs should be unique. 
 		
 		System.out.println("Register Processor triggered!");
-		String firstname = msg.getDataPayload().get("firstname"); 
-		String lastname = msg.getDataPayload().get("lastname"); 
+		String firstname = msg.getDataPayload().get("firstName"); 
+		String lastname = msg.getDataPayload().get("secondName"); 
 		String mail = msg.getDataPayload().get("mail"); 
-		String googleID = msg.getDataPayload().get("googleID"); 
+		String googleID = msg.getDataPayload().get("googleId"); 
 		String token = msg.getFrom(); 
 		
 		if(firstname != null && lastname !=null && mail != null && googleID !=null &&token != null) {
@@ -36,8 +36,6 @@ public class RegisterProcessor implements PayloadProcessor {
 		}else {
 			System.out.println("Something went wrong...");
 		}
-		
-		
 	}
 
 }

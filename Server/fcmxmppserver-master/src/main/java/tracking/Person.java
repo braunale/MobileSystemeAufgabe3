@@ -50,22 +50,26 @@ public class Person {
 	
 	
 	public void addGPS(GPS gps) {
-		gpsData.add(gps); 
+		gpsData.add(gps);
+		print();
 	}
 	
 	
 	public void addLight(Light light) {
 		lightData.add(light); 
+		print();
 	}
 	
 	public void addAccelerator(Accelerator accelerator) {
 		acceleratorData.add(accelerator); 
+		print();
 	}
-	
 	
 	public void print() {
-		
+		System.out.println("FirstName: " + getFirstname());
+		System.out.println("LastName: " + getLastname());
+		System.out.println("Mail: " + getMail());
+		System.out.println("GoogleId: " + getGoogleID());
+		System.out.println("Token: " + getToken());
 	}
-	
-	
 }

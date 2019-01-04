@@ -15,7 +15,7 @@ public class AcceleratorProcessor implements PayloadProcessor{
 		System.out.println("Accelerator Processor triggered!");
 		String velX = msg.getDataPayload().get("velX"); 
 		String velY = msg.getDataPayload().get("velY"); 
-		String velZ = msg.getDataPayload().get("velZ"); 
+		String velZ = msg.getDataPayload().get("velZ");
 		String timestamp = msg.getDataPayload().get("timestamp"); 
 		
 		

@@ -22,7 +22,6 @@ public class GPSProcessor implements PayloadProcessor{
 			CcsClient.person.addGPS(new GPS(Long.valueOf(timestamp), Double.valueOf(latitude), Double.valueOf(longitude)));
 		}else {
 			System.out.println("Something went wrong...");
-		}
-		
+		}		
 	}
 }

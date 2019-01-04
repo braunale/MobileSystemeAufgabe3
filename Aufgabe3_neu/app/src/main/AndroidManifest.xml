@@ -18,11 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GpsActivity" android:screenOrientation="portrait" />
-        <activity android:name=".BrightnessActivity" android:screenOrientation="portrait" />
-        <activity android:name=".AccelerometerActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name=".GpsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BrightnessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AccelerometerActivity"
+            android:screenOrientation="portrait" />
 
-        <service android:name=".MyFirebaseMessagingService"
+        <service
+            android:name=".MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -30,6 +37,7 @@
             </intent-filter>
         </service>
 
+        <activity android:name=".LoggedInActivity"></activity>
     </application>
 
 </manifest>
